@@ -186,7 +186,7 @@ public class StudentsController {
             return ResponseEntity.status(401).body(null);
         } else {
             String account = session.getAttribute("ZOSMF_Account").toString();
-            String[] labs = {"RACF", "SMS", "CATALOG", "REXX", "MVS"};
+            String[] labs = {"RACF", "SMS", "CATALOG", "REXX", "MVS", "DB2-BATCH"};
             String sql = "select is_draft from report where uid=? and lab=?";
             List<Map<String, String>> ans = new ArrayList<>();
             for (String lab : labs) {

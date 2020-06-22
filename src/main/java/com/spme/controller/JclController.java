@@ -61,10 +61,8 @@ public class JclController {
                 +"   RUN  PROGRAM(DSNTIAD) PLAN(DSNTIAA1) -  \n"
                 +"    LIB('DSNA10.DP10.RUNLIB.LOAD')    \n"
                 +"//SYSIN    DD * \n"+"  ";
-        System.out.println(head+body.get("jcl"));
         List<JobOutputListItem> res;
         if ((res = js.submitJCL(session, head+body.get("jcl"))) != null) {
-
             return ResponseEntity.ok(res);
         } else {
             // time out

@@ -17,6 +17,9 @@ HELP.md
 *.iws
 *.iml
 *.ipr
+global-groovy.log
+soapui-errors.log
+soapui.log
 
 ### NetBeans ###
 /nbproject/private/
